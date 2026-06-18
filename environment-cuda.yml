@@ -10,7 +10,9 @@ dependencies:
   - pytorch>=1.8.1
   - torchaudio>=0.8
   - cudatoolkit>=10
+  - scipy
   - tqdm>=4.36
+  - mido
   - pip
   - pip:
     - diffq>=0.2
@@ -26,3 +28,4 @@ dependencies:
     - soundfile
     - submitit
     - treetable>=0.2.3
+    - midi2audio
