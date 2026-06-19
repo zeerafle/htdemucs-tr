@@ -6,13 +6,15 @@ For each MUSDB track:
   - Replace vocals.wav with a bağlama wav (cycling through available files)
   - Copy and normalize bass, drums, other stems
   - Render mixture.wav from all four stems
-  - Output to data/dataset/{train|test}/{track_name}/
+  - Output to data/dataset/{train|valid}/{track_name}/
 """
 
 import argparse
 import random
 from pathlib import Path
 
+import numpy as np
+import soundfile as sf
 from pydub import AudioSegment
 
 # --- Paths ---
@@ -62,11 +64,19 @@ def load(path: Path) -> AudioSegment:
 def mix_track(musdb_track: Path, baglama_path: Path, out_track: Path) -> None:
     out_track.mkdir(parents=True, exist_ok=True)
 
-    # Use bass.wav as duration reference (all MUSDB stems share the same duration)
-    reference = load(musdb_track / "bass.wav")
+    # 1. Get EXACT sample count from the original MUSDB track
+    original_bass = musdb_track / "bass.wav"
+    exact_samples = sf.info(str(original_bass)).frames
+
+    # Use bass.wav as duration reference for pydub
+    reference = load(original_bass)
 
     # Bağlama → vocals slot
     baglama = load(baglama_path)
+    # Ensure baglama is exactly 44100 if it isn't already
+    if baglama.frame_rate != reference.frame_rate:
+        baglama = baglama.set_frame_rate(reference.frame_rate)
+
     baglama = match_duration(baglama, reference)
     baglama = normalize(baglama)
     baglama.export(str(out_track / "vocals.wav"), format="wav")
@@ -80,6 +90,22 @@ def mix_track(musdb_track: Path, baglama_path: Path, out_track: Path) -> None:
         mixture = mixture.overlay(audio)
 
     normalize(mixture).export(str(out_track / "mixture.wav"), format="wav")
+
+    # --- FIX SAMPLE DRIFT ---
+    # Read each exported wav and trim/pad it to the exact sample count
+    for wav_file in out_track.glob("*.wav"):
+        data, sr = sf.read(str(wav_file))
+
+        if len(data) > exact_samples:
+            data = data[:exact_samples]  # Trim excess samples
+        elif len(data) < exact_samples:
+            # Pad with silence if it's slightly too short
+            pad_shape = list(data.shape)
+            pad_shape[0] = exact_samples - len(data)
+            padding = np.zeros(pad_shape, dtype=data.dtype)
+            data = np.concatenate((data, padding))
+
+        sf.write(str(wav_file), data, sr)
 
 
 # --- Dataset builder ---
@@ -113,10 +139,10 @@ if __name__ == "__main__":
         help="Number of train tracks to render (0 = all, default: 0)",
     )
     parser.add_argument(
-        "--n_test",
+        "--n_valid",
         type=int,
         default=0,
-        help="Number of test tracks to render (0 = all, default: 0)",
+        help="Number of valid (test) tracks to render (0 = all, default: 0)",
     )
     parser.add_argument(
         "--shuffle_baglama",
@@ -139,5 +165,5 @@ if __name__ == "__main__":
 
     print(f"Found {len(baglama_files)} bağlama files.")
 
-    for split, n in [("train", args.n_train), ("test", args.n_test)]:
+    for split, n in [("train", args.n_train), ("valid", args.n_valid)]:
         process_split(split, n, baglama_files)
