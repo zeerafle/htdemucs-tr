@@ -1,0 +1,7 @@
+# @package _global_
+dset:
+  use_musdb: false
+  wav: /teamspace/studios/this_studio/htdemucs-tr/data/dataset
+  segment: 6
+  samplerate: 44100
+  channels: 2
