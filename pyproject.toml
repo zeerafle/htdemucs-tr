@@ -1,0 +1,38 @@
+[project]
+name = "demucs"
+version = "0.1.0"
+requires-python = ">=3.8, <3.10"
+dependencies = [
+    # formerly conda python dependencies
+    "torch>=1.8.1",
+    "torchaudio>=0.8",
+    "scipy",
+    "tqdm>=4.36",
+    "mido",
+    # formerly pip dependencies
+    "diffq>=0.2",
+    "dora-search",
+    "einops",
+    "hydra-colorlog>=1.1",
+    "hydra-core>=1.1",
+    "julius>=0.2.3",
+    "lameenc>=1.2",
+    "openunmix",
+    "musdb>=0.4.0",
+    "museval>=0.4.0",
+    "soundfile",
+    "submitit",
+    "treetable>=0.2.3",
+    "midi2audio",
+    "pydub>=0.25.1",
+]
+
+# tell uv to grab the cuda-enabled versions of pytorch
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu126" }]
+torchaudio = [{ index = "pytorch-cu126" }]

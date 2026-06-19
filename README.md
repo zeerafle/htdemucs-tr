@@ -5,16 +5,15 @@
 ### Setup Env
 
 ```bash
-# for new environment
-# conda env create -f environment-cuda.yml
-# for existing environment (e.g. lightning.ai machine) use update
-conda env update -f environment-cuda.yml
+uv sync
+sudo apt install ffmpeg fluidsynth
+# optional install dvc for data versioning https://doc.dvc.org/install/linux
 ```
 
 ### Synthesize Midis
 
 ```bash
-python scripts/generate_midi.py \
+uv run scripts/generate_midi.py \
     synthesize-only \
     /teamspace/studios/turkish-music/anatolian-SAM/data/midis/fixed/baglama_saz \
     data/synthesized/ \
@@ -30,4 +29,10 @@ python scripts/generate_midi.py \
 ```bash
 uvx zenodo_get 3338373 -o data
 unzip data/musdb18hq -d data/musdb18-hq
+```
+
+### Generate and Mix Stems
+
+```bash
+uv run scripts/mix_stem.py --n_train 60 --n_test 15 --shuffle_baglama
 ```
