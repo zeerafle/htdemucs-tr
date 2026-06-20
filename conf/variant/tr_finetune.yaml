@@ -1,0 +1,19 @@
+# @package _global_
+
+epochs: 40
+batch_size: 4
+optim:
+  lr: 0.0006
+test:
+  every: 10
+  sdr: true
+dset:
+  segment: 7.8
+  shift: 2
+
+augment:
+  scale:
+    proba: 1.0
+  shift_same: true
+  remix:
+    proba: 1.0
