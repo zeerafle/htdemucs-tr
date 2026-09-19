@@ -1,0 +1,303 @@
+[2026-06-20 01:09:27,250][demucs.train][INFO] - For logs, checkpoints and samples check /teamspace/studios/this_studio/htdemucs-tr/outputs/xps/a8b66669
+[2026-06-20 01:09:27,250][dora.distrib][INFO] - world_size is 1, skipping init.
+[2026-06-20 01:09:29,516][demucs.train][INFO] - train/valid set size: 6740 15
+[2026-06-20 01:09:30,463][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 01:09:30,464][demucs.solver][INFO] - Training...
+[2026-06-20 01:12:35,922][demucs.solver][INFO] - Train | Epoch 1 | 100/400 | 0.54 it/sec | Loss 0.1667 | Reco 0.1667 | Grad 0.4328
+[2026-06-20 01:15:36,748][demucs.solver][INFO] - Train | Epoch 1 | 200/400 | 0.55 it/sec | Loss 0.1599 | Reco 0.1599 | Grad 0.4112
+[2026-06-20 01:18:36,093][demucs.solver][INFO] - Train | Epoch 1 | 300/400 | 0.55 it/sec | Loss 0.1576 | Reco 0.1576 | Grad 0.3925
+[2026-06-20 01:21:36,382][demucs.solver][INFO] - [1mTrain Summary | Epoch 1 | Loss=0.1557 | Reco=0.1557 | Grad=0.3709[0m
+[2026-06-20 01:21:36,383][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 01:21:36,383][demucs.solver][INFO] - Cross validation...
+[2026-06-20 01:22:38,941][demucs.solver][INFO] - Valid | Epoch 1 | 3/15 | 15.6 sec/it | Loss 0.4219 | Reco 0.4219 | Nsdr 4.608
+[2026-06-20 01:23:13,256][demucs.solver][INFO] - Valid | Epoch 1 | 6/15 | 13.8 sec/it | Loss 0.4184 | Reco 0.4184 | Nsdr 4.445
+[2026-06-20 01:23:54,577][demucs.solver][INFO] - Valid | Epoch 1 | 9/15 | 13.8 sec/it | Loss 0.4172 | Reco 0.4172 | Nsdr 4.506
+[2026-06-20 01:24:28,166][demucs.solver][INFO] - Valid | Epoch 1 | 12/15 | 13.2 sec/it | Loss 0.4215 | Reco 0.4215 | Nsdr 4.367
+[2026-06-20 01:25:58,595][demucs.solver][INFO] - Valid | Epoch 1 | 3/15 | 15.6 sec/it | Loss 0.4177 | Reco 0.4177 | Nsdr 4.690
+[2026-06-20 01:26:32,968][demucs.solver][INFO] - Valid | Epoch 1 | 6/15 | 13.8 sec/it | Loss 0.4139 | Reco 0.4139 | Nsdr 4.530
+[2026-06-20 01:27:14,205][demucs.solver][INFO] - Valid | Epoch 1 | 9/15 | 13.8 sec/it | Loss 0.4132 | Reco 0.4132 | Nsdr 4.582
+[2026-06-20 01:27:47,554][demucs.solver][INFO] - Valid | Epoch 1 | 12/15 | 13.2 sec/it | Loss 0.4170 | Reco 0.4170 | Nsdr 4.448
+[2026-06-20 01:29:17,449][demucs.solver][INFO] - Valid | Epoch 1 | 3/15 | 15.5 sec/it | Loss 0.4178 | Reco 0.4178 | Nsdr 4.686
+[2026-06-20 01:29:51,865][demucs.solver][INFO] - Valid | Epoch 1 | 6/15 | 13.8 sec/it | Loss 0.4139 | Reco 0.4139 | Nsdr 4.530
+[2026-06-20 01:30:33,283][demucs.solver][INFO] - Valid | Epoch 1 | 9/15 | 13.8 sec/it | Loss 0.4132 | Reco 0.4132 | Nsdr 4.582
+[2026-06-20 01:31:06,563][demucs.solver][INFO] - Valid | Epoch 1 | 12/15 | 13.2 sec/it | Loss 0.4170 | Reco 0.4170 | Nsdr 4.448
+[2026-06-20 01:32:36,312][demucs.solver][INFO] - Valid | Epoch 1 | 3/15 | 15.4 sec/it | Loss 0.4218 | Reco 0.4218 | Nsdr 4.610
+[2026-06-20 01:33:10,642][demucs.solver][INFO] - Valid | Epoch 1 | 6/15 | 13.7 sec/it | Loss 0.4182 | Reco 0.4182 | Nsdr 4.448
+[2026-06-20 01:33:52,375][demucs.solver][INFO] - Valid | Epoch 1 | 9/15 | 13.8 sec/it | Loss 0.4171 | Reco 0.4171 | Nsdr 4.508
+[2026-06-20 01:34:26,028][demucs.solver][INFO] - Valid | Epoch 1 | 12/15 | 13.2 sec/it | Loss 0.4214 | Reco 0.4214 | Nsdr 4.368
+[2026-06-20 01:35:56,496][demucs.solver][INFO] - Valid | Epoch 1 | 3/15 | 15.5 sec/it | Loss 0.4217 | Reco 0.4217 | Nsdr 4.611
+[2026-06-20 01:36:31,058][demucs.solver][INFO] - Valid | Epoch 1 | 6/15 | 13.8 sec/it | Loss 0.4184 | Reco 0.4184 | Nsdr 4.445
+[2026-06-20 01:37:12,691][demucs.solver][INFO] - Valid | Epoch 1 | 9/15 | 13.8 sec/it | Loss 0.4173 | Reco 0.4173 | Nsdr 4.505
+[2026-06-20 01:37:46,353][demucs.solver][INFO] - Valid | Epoch 1 | 12/15 | 13.2 sec/it | Loss 0.4216 | Reco 0.4216 | Nsdr 4.366
+[2026-06-20 01:38:14,218][demucs.solver][INFO] - [1mValid Summary | Epoch 1 | Loss=0.4162 | Reco=0.4162 | Nsdr=4.473 | Best=0.4162 | Bname=ema_batch_1[0m
+[2026-06-20 01:38:14,218][demucs.solver][INFO] - [1mNew best valid loss 0.4162[0m
+[2026-06-20 01:38:16,647][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 01:38:16,647][demucs.solver][INFO] - Training...
+[2026-06-20 01:41:21,939][demucs.solver][INFO] - Train | Epoch 2 | 100/400 | 0.55 it/sec | Loss 0.1475 | Reco 0.1475 | Grad 0.2789
+[2026-06-20 01:44:21,379][demucs.solver][INFO] - Train | Epoch 2 | 200/400 | 0.55 it/sec | Loss 0.1430 | Reco 0.1430 | Grad 0.2936
+[2026-06-20 01:47:20,805][demucs.solver][INFO] - Train | Epoch 2 | 300/400 | 0.55 it/sec | Loss 0.1466 | Reco 0.1466 | Grad 0.3179
+[2026-06-20 01:50:21,196][demucs.solver][INFO] - [1mTrain Summary | Epoch 2 | Loss=0.1493 | Reco=0.1493 | Grad=0.3270[0m
+[2026-06-20 01:50:21,197][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 01:50:21,197][demucs.solver][INFO] - Cross validation...
+[2026-06-20 01:51:23,729][demucs.solver][INFO] - Valid | Epoch 2 | 3/15 | 15.6 sec/it | Loss 0.4395 | Reco 0.4395 | Nsdr 4.303
+[2026-06-20 01:51:58,186][demucs.solver][INFO] - Valid | Epoch 2 | 6/15 | 13.8 sec/it | Loss 0.4341 | Reco 0.4341 | Nsdr 4.140
+[2026-06-20 01:52:39,811][demucs.solver][INFO] - Valid | Epoch 2 | 9/15 | 13.8 sec/it | Loss 0.4331 | Reco 0.4331 | Nsdr 4.208
+[2026-06-20 01:53:13,079][demucs.solver][INFO] - Valid | Epoch 2 | 12/15 | 13.2 sec/it | Loss 0.4385 | Reco 0.4385 | Nsdr 4.053
+[2026-06-20 01:54:43,245][demucs.solver][INFO] - Valid | Epoch 2 | 3/15 | 15.5 sec/it | Loss 0.4155 | Reco 0.4155 | Nsdr 4.731
+[2026-06-20 01:55:17,776][demucs.solver][INFO] - Valid | Epoch 2 | 6/15 | 13.8 sec/it | Loss 0.4121 | Reco 0.4121 | Nsdr 4.564
+[2026-06-20 01:55:59,290][demucs.solver][INFO] - Valid | Epoch 2 | 9/15 | 13.8 sec/it | Loss 0.4115 | Reco 0.4115 | Nsdr 4.615
+[2026-06-20 01:56:32,776][demucs.solver][INFO] - Valid | Epoch 2 | 12/15 | 13.2 sec/it | Loss 0.4156 | Reco 0.4156 | Nsdr 4.477
+[2026-06-20 01:58:03,163][demucs.solver][INFO] - Valid | Epoch 2 | 3/15 | 15.6 sec/it | Loss 0.4159 | Reco 0.4159 | Nsdr 4.723
+[2026-06-20 01:58:37,758][demucs.solver][INFO] - Valid | Epoch 2 | 6/15 | 13.9 sec/it | Loss 0.4123 | Reco 0.4123 | Nsdr 4.560
+[2026-06-20 01:59:19,333][demucs.solver][INFO] - Valid | Epoch 2 | 9/15 | 13.9 sec/it | Loss 0.4117 | Reco 0.4117 | Nsdr 4.612
+[2026-06-20 01:59:52,935][demucs.solver][INFO] - Valid | Epoch 2 | 12/15 | 13.2 sec/it | Loss 0.4157 | Reco 0.4157 | Nsdr 4.473
+[2026-06-20 02:01:23,702][demucs.solver][INFO] - Valid | Epoch 2 | 3/15 | 15.6 sec/it | Loss 0.4252 | Reco 0.4252 | Nsdr 4.547
+[2026-06-20 02:01:58,449][demucs.solver][INFO] - Valid | Epoch 2 | 6/15 | 13.9 sec/it | Loss 0.4205 | Reco 0.4205 | Nsdr 4.389
+[2026-06-20 02:02:40,361][demucs.solver][INFO] - Valid | Epoch 2 | 9/15 | 13.9 sec/it | Loss 0.4196 | Reco 0.4196 | Nsdr 4.449
+[2026-06-20 02:03:13,900][demucs.solver][INFO] - Valid | Epoch 2 | 12/15 | 13.3 sec/it | Loss 0.4253 | Reco 0.4253 | Nsdr 4.281
+[2026-06-20 02:04:44,771][demucs.solver][INFO] - Valid | Epoch 2 | 3/15 | 15.6 sec/it | Loss 0.4250 | Reco 0.4250 | Nsdr 4.548
+[2026-06-20 02:05:19,571][demucs.solver][INFO] - Valid | Epoch 2 | 6/15 | 13.9 sec/it | Loss 0.4204 | Reco 0.4204 | Nsdr 4.391
+[2026-06-20 02:06:01,270][demucs.solver][INFO] - Valid | Epoch 2 | 9/15 | 13.9 sec/it | Loss 0.4194 | Reco 0.4194 | Nsdr 4.451
+[2026-06-20 02:06:34,751][demucs.solver][INFO] - Valid | Epoch 2 | 12/15 | 13.3 sec/it | Loss 0.4253 | Reco 0.4253 | Nsdr 4.281
+[2026-06-20 02:07:02,832][demucs.solver][INFO] - [1mValid Summary | Epoch 2 | Loss=0.4147 | Reco=0.4147 | Nsdr=4.502 | Best=0.4147 | Bname=ema_batch_0[0m
+[2026-06-20 02:07:02,833][demucs.solver][INFO] - [1mNew best valid loss 0.4147[0m
+[2026-06-20 02:07:08,615][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 02:07:08,616][demucs.solver][INFO] - Training...
+[2026-06-20 02:10:14,061][demucs.solver][INFO] - Train | Epoch 3 | 100/400 | 0.55 it/sec | Loss 0.1590 | Reco 0.1590 | Grad 0.2965
+[2026-06-20 02:13:13,330][demucs.solver][INFO] - Train | Epoch 3 | 200/400 | 0.55 it/sec | Loss 0.1535 | Reco 0.1535 | Grad 0.3067
+[2026-06-20 02:16:13,168][demucs.solver][INFO] - Train | Epoch 3 | 300/400 | 0.55 it/sec | Loss 0.1496 | Reco 0.1496 | Grad 0.2962
+[2026-06-20 02:19:13,266][demucs.solver][INFO] - [1mTrain Summary | Epoch 3 | Loss=0.1486 | Reco=0.1486 | Grad=0.2799[0m
+[2026-06-20 02:19:13,266][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 02:19:13,267][demucs.solver][INFO] - Cross validation...
+[2026-06-20 02:20:15,354][demucs.solver][INFO] - Valid | Epoch 3 | 3/15 | 15.5 sec/it | Loss 0.4165 | Reco 0.4165 | Nsdr 4.721
+[2026-06-20 02:20:49,800][demucs.solver][INFO] - Valid | Epoch 3 | 6/15 | 13.8 sec/it | Loss 0.4153 | Reco 0.4153 | Nsdr 4.481
+[2026-06-20 02:21:31,163][demucs.solver][INFO] - Valid | Epoch 3 | 9/15 | 13.8 sec/it | Loss 0.4143 | Reco 0.4143 | Nsdr 4.549
+[2026-06-20 02:22:04,672][demucs.solver][INFO] - Valid | Epoch 3 | 12/15 | 13.2 sec/it | Loss 0.4192 | Reco 0.4192 | Nsdr 4.407
+[2026-06-20 02:23:35,108][demucs.solver][INFO] - Valid | Epoch 3 | 3/15 | 15.5 sec/it | Loss 0.4166 | Reco 0.4166 | Nsdr 4.708
+[2026-06-20 02:24:10,014][demucs.solver][INFO] - Valid | Epoch 3 | 6/15 | 13.9 sec/it | Loss 0.4133 | Reco 0.4133 | Nsdr 4.538
+[2026-06-20 02:24:51,667][demucs.solver][INFO] - Valid | Epoch 3 | 9/15 | 13.9 sec/it | Loss 0.4127 | Reco 0.4127 | Nsdr 4.591
+[2026-06-20 02:25:25,203][demucs.solver][INFO] - Valid | Epoch 3 | 12/15 | 13.2 sec/it | Loss 0.4166 | Reco 0.4166 | Nsdr 4.452
+[2026-06-20 02:26:56,362][demucs.solver][INFO] - Valid | Epoch 3 | 3/15 | 15.7 sec/it | Loss 0.4167 | Reco 0.4167 | Nsdr 4.708
+[2026-06-20 02:27:31,050][demucs.solver][INFO] - Valid | Epoch 3 | 6/15 | 13.9 sec/it | Loss 0.4135 | Reco 0.4135 | Nsdr 4.535
+[2026-06-20 02:28:12,665][demucs.solver][INFO] - Valid | Epoch 3 | 9/15 | 13.9 sec/it | Loss 0.4128 | Reco 0.4128 | Nsdr 4.587
+[2026-06-20 02:28:46,474][demucs.solver][INFO] - Valid | Epoch 3 | 12/15 | 13.3 sec/it | Loss 0.4168 | Reco 0.4168 | Nsdr 4.449
+[2026-06-20 02:30:17,619][demucs.solver][INFO] - Valid | Epoch 3 | 3/15 | 15.7 sec/it | Loss 0.4191 | Reco 0.4191 | Nsdr 4.664
+[2026-06-20 02:30:52,121][demucs.solver][INFO] - Valid | Epoch 3 | 6/15 | 13.9 sec/it | Loss 0.4155 | Reco 0.4155 | Nsdr 4.494
+[2026-06-20 02:31:33,678][demucs.solver][INFO] - Valid | Epoch 3 | 9/15 | 13.9 sec/it | Loss 0.4144 | Reco 0.4144 | Nsdr 4.555
+[2026-06-20 02:32:07,419][demucs.solver][INFO] - Valid | Epoch 3 | 12/15 | 13.3 sec/it | Loss 0.4189 | Reco 0.4189 | Nsdr 4.411
+[2026-06-20 02:33:37,854][demucs.solver][INFO] - Valid | Epoch 3 | 3/15 | 15.5 sec/it | Loss 0.4194 | Reco 0.4194 | Nsdr 4.659
+[2026-06-20 02:34:12,356][demucs.solver][INFO] - Valid | Epoch 3 | 6/15 | 13.8 sec/it | Loss 0.4155 | Reco 0.4155 | Nsdr 4.493
+[2026-06-20 02:34:53,952][demucs.solver][INFO] - Valid | Epoch 3 | 9/15 | 13.8 sec/it | Loss 0.4145 | Reco 0.4145 | Nsdr 4.553
+[2026-06-20 02:35:27,386][demucs.solver][INFO] - Valid | Epoch 3 | 12/15 | 13.2 sec/it | Loss 0.4192 | Reco 0.4192 | Nsdr 4.403
+[2026-06-20 02:35:55,020][demucs.solver][INFO] - [1mValid Summary | Epoch 3 | Loss=0.4158 | Reco=0.4158 | Nsdr=4.478 | Best=0.4147 | Bname=ema_batch_0[0m
+[2026-06-20 02:36:00,491][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 02:36:00,492][demucs.solver][INFO] - Training...
+[2026-06-20 02:39:06,299][demucs.solver][INFO] - Train | Epoch 4 | 100/400 | 0.54 it/sec | Loss 0.1391 | Reco 0.1391 | Grad 0.2461
+[2026-06-20 02:42:05,218][demucs.solver][INFO] - Train | Epoch 4 | 200/400 | 0.55 it/sec | Loss 0.1466 | Reco 0.1466 | Grad 0.2992
+[2026-06-20 02:45:05,028][demucs.solver][INFO] - Train | Epoch 4 | 300/400 | 0.55 it/sec | Loss 0.1480 | Reco 0.1480 | Grad 0.3012
+[2026-06-20 02:48:05,535][demucs.solver][INFO] - [1mTrain Summary | Epoch 4 | Loss=0.1499 | Reco=0.1499 | Grad=0.3039[0m
+[2026-06-20 02:48:05,536][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 02:48:05,536][demucs.solver][INFO] - Cross validation...
+[2026-06-20 02:49:08,396][demucs.solver][INFO] - Valid | Epoch 4 | 3/15 | 15.7 sec/it | Loss 0.4226 | Reco 0.4226 | Nsdr 4.569
+[2026-06-20 02:49:42,935][demucs.solver][INFO] - Valid | Epoch 4 | 6/15 | 13.9 sec/it | Loss 0.4205 | Reco 0.4205 | Nsdr 4.336
+[2026-06-20 02:50:24,594][demucs.solver][INFO] - Valid | Epoch 4 | 9/15 | 13.9 sec/it | Loss 0.4202 | Reco 0.4202 | Nsdr 4.394
+[2026-06-20 02:50:58,076][demucs.solver][INFO] - Valid | Epoch 4 | 12/15 | 13.3 sec/it | Loss 0.4253 | Reco 0.4253 | Nsdr 4.255
+[2026-06-20 02:52:28,412][demucs.solver][INFO] - Valid | Epoch 4 | 3/15 | 15.5 sec/it | Loss 0.4157 | Reco 0.4157 | Nsdr 4.730
+[2026-06-20 02:53:02,653][demucs.solver][INFO] - Valid | Epoch 4 | 6/15 | 13.8 sec/it | Loss 0.4130 | Reco 0.4130 | Nsdr 4.549
+[2026-06-20 02:53:43,937][demucs.solver][INFO] - Valid | Epoch 4 | 9/15 | 13.8 sec/it | Loss 0.4121 | Reco 0.4121 | Nsdr 4.604
+[2026-06-20 02:54:17,551][demucs.solver][INFO] - Valid | Epoch 4 | 12/15 | 13.2 sec/it | Loss 0.4164 | Reco 0.4164 | Nsdr 4.461
+[2026-06-20 02:55:47,739][demucs.solver][INFO] - Valid | Epoch 4 | 3/15 | 15.5 sec/it | Loss 0.4158 | Reco 0.4158 | Nsdr 4.723
+[2026-06-20 02:56:22,168][demucs.solver][INFO] - Valid | Epoch 4 | 6/15 | 13.8 sec/it | Loss 0.4129 | Reco 0.4129 | Nsdr 4.547
+[2026-06-20 02:57:03,534][demucs.solver][INFO] - Valid | Epoch 4 | 9/15 | 13.8 sec/it | Loss 0.4121 | Reco 0.4121 | Nsdr 4.602
+[2026-06-20 02:57:36,904][demucs.solver][INFO] - Valid | Epoch 4 | 12/15 | 13.2 sec/it | Loss 0.4163 | Reco 0.4163 | Nsdr 4.462
+[2026-06-20 02:59:06,419][demucs.solver][INFO] - Valid | Epoch 4 | 3/15 | 15.4 sec/it | Loss 0.4171 | Reco 0.4171 | Nsdr 4.701
+[2026-06-20 02:59:41,036][demucs.solver][INFO] - Valid | Epoch 4 | 6/15 | 13.7 sec/it | Loss 0.4142 | Reco 0.4142 | Nsdr 4.517
+[2026-06-20 03:00:22,383][demucs.solver][INFO] - Valid | Epoch 4 | 9/15 | 13.7 sec/it | Loss 0.4133 | Reco 0.4133 | Nsdr 4.576
+[2026-06-20 03:00:55,814][demucs.solver][INFO] - Valid | Epoch 4 | 12/15 | 13.1 sec/it | Loss 0.4178 | Reco 0.4178 | Nsdr 4.431
+[2026-06-20 03:02:26,936][demucs.solver][INFO] - Valid | Epoch 4 | 3/15 | 15.8 sec/it | Loss 0.4173 | Reco 0.4173 | Nsdr 4.696
+[2026-06-20 03:03:01,269][demucs.solver][INFO] - Valid | Epoch 4 | 6/15 | 13.9 sec/it | Loss 0.4143 | Reco 0.4143 | Nsdr 4.513
+[2026-06-20 03:03:42,794][demucs.solver][INFO] - Valid | Epoch 4 | 9/15 | 13.9 sec/it | Loss 0.4133 | Reco 0.4133 | Nsdr 4.573
+[2026-06-20 03:04:16,223][demucs.solver][INFO] - Valid | Epoch 4 | 12/15 | 13.3 sec/it | Loss 0.4180 | Reco 0.4180 | Nsdr 4.426
+[2026-06-20 03:04:44,282][demucs.solver][INFO] - [1mValid Summary | Epoch 4 | Loss=0.4155 | Reco=0.4155 | Nsdr=4.487 | Best=0.4147 | Bname=ema_batch_1[0m
+[2026-06-20 03:04:49,056][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 03:04:49,056][demucs.solver][INFO] - Training...
+[2026-06-20 03:07:53,458][demucs.solver][INFO] - Train | Epoch 5 | 100/400 | 0.55 it/sec | Loss 0.1466 | Reco 0.1466 | Grad 0.2328
+[2026-06-20 03:10:52,554][demucs.solver][INFO] - Train | Epoch 5 | 200/400 | 0.55 it/sec | Loss 0.1442 | Reco 0.1442 | Grad 0.2348
+[2026-06-20 03:13:52,164][demucs.solver][INFO] - Train | Epoch 5 | 300/400 | 0.55 it/sec | Loss 0.1432 | Reco 0.1432 | Grad 0.2515
+[2026-06-20 03:16:52,303][demucs.solver][INFO] - [1mTrain Summary | Epoch 5 | Loss=0.1463 | Reco=0.1463 | Grad=0.2660[0m
+[2026-06-20 03:16:52,304][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 03:16:52,305][demucs.solver][INFO] - Cross validation...
+[2026-06-20 03:17:54,815][demucs.solver][INFO] - Valid | Epoch 5 | 3/15 | 15.6 sec/it | Loss 0.4256 | Reco 0.4256 | Nsdr 4.518
+[2026-06-20 03:18:29,483][demucs.solver][INFO] - Valid | Epoch 5 | 6/15 | 13.9 sec/it | Loss 0.4235 | Reco 0.4235 | Nsdr 4.282
+[2026-06-20 03:19:11,237][demucs.solver][INFO] - Valid | Epoch 5 | 9/15 | 13.9 sec/it | Loss 0.4226 | Reco 0.4226 | Nsdr 4.354
+[2026-06-20 03:19:44,767][demucs.solver][INFO] - Valid | Epoch 5 | 12/15 | 13.3 sec/it | Loss 0.4254 | Reco 0.4254 | Nsdr 4.246
+[2026-06-20 03:21:16,122][demucs.solver][INFO] - Valid | Epoch 5 | 3/15 | 15.7 sec/it | Loss 0.4145 | Reco 0.4145 | Nsdr 4.749
+[2026-06-20 03:21:50,896][demucs.solver][INFO] - Valid | Epoch 5 | 6/15 | 14.0 sec/it | Loss 0.4117 | Reco 0.4117 | Nsdr 4.570
+[2026-06-20 03:22:32,437][demucs.solver][INFO] - Valid | Epoch 5 | 9/15 | 13.9 sec/it | Loss 0.4110 | Reco 0.4110 | Nsdr 4.624
+[2026-06-20 03:23:06,017][demucs.solver][INFO] - Valid | Epoch 5 | 12/15 | 13.3 sec/it | Loss 0.4152 | Reco 0.4152 | Nsdr 4.482
+[2026-06-20 03:24:37,061][demucs.solver][INFO] - Valid | Epoch 5 | 3/15 | 15.7 sec/it | Loss 0.4149 | Reco 0.4149 | Nsdr 4.743
+[2026-06-20 03:25:11,614][demucs.solver][INFO] - Valid | Epoch 5 | 6/15 | 13.9 sec/it | Loss 0.4121 | Reco 0.4121 | Nsdr 4.565
+[2026-06-20 03:25:53,144][demucs.solver][INFO] - Valid | Epoch 5 | 9/15 | 13.9 sec/it | Loss 0.4113 | Reco 0.4113 | Nsdr 4.618
+[2026-06-20 03:26:26,778][demucs.solver][INFO] - Valid | Epoch 5 | 12/15 | 13.3 sec/it | Loss 0.4155 | Reco 0.4155 | Nsdr 4.477
+[2026-06-20 03:27:57,245][demucs.solver][INFO] - Valid | Epoch 5 | 3/15 | 15.6 sec/it | Loss 0.4162 | Reco 0.4162 | Nsdr 4.713
+[2026-06-20 03:28:31,935][demucs.solver][INFO] - Valid | Epoch 5 | 6/15 | 13.9 sec/it | Loss 0.4138 | Reco 0.4138 | Nsdr 4.520
+[2026-06-20 03:29:13,643][demucs.solver][INFO] - Valid | Epoch 5 | 9/15 | 13.9 sec/it | Loss 0.4129 | Reco 0.4129 | Nsdr 4.577
+[2026-06-20 03:29:47,241][demucs.solver][INFO] - Valid | Epoch 5 | 12/15 | 13.3 sec/it | Loss 0.4171 | Reco 0.4171 | Nsdr 4.440
+[2026-06-20 03:31:17,843][demucs.solver][INFO] - Valid | Epoch 5 | 3/15 | 15.6 sec/it | Loss 0.4164 | Reco 0.4164 | Nsdr 4.708
+[2026-06-20 03:31:52,348][demucs.solver][INFO] - Valid | Epoch 5 | 6/15 | 13.8 sec/it | Loss 0.4137 | Reco 0.4137 | Nsdr 4.522
+[2026-06-20 03:32:34,103][demucs.solver][INFO] - Valid | Epoch 5 | 9/15 | 13.9 sec/it | Loss 0.4128 | Reco 0.4128 | Nsdr 4.579
+[2026-06-20 03:33:07,607][demucs.solver][INFO] - Valid | Epoch 5 | 12/15 | 13.2 sec/it | Loss 0.4170 | Reco 0.4170 | Nsdr 4.441
+[2026-06-20 03:33:35,475][demucs.solver][INFO] - [1mValid Summary | Epoch 5 | Loss=0.4144 | Reco=0.4144 | Nsdr=4.507 | Best=0.4144 | Bname=ema_batch_0[0m
+[2026-06-20 03:33:35,475][demucs.solver][INFO] - [1mNew best valid loss 0.4144[0m
+[2026-06-20 03:33:41,211][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 03:33:41,212][demucs.solver][INFO] - Training...
+[2026-06-20 03:36:45,683][demucs.solver][INFO] - Train | Epoch 6 | 100/400 | 0.55 it/sec | Loss 0.1433 | Reco 0.1433 | Grad 0.2616
+[2026-06-20 03:39:45,487][demucs.solver][INFO] - Train | Epoch 6 | 200/400 | 0.55 it/sec | Loss 0.1444 | Reco 0.1444 | Grad 0.2768
+[2026-06-20 03:42:45,120][demucs.solver][INFO] - Train | Epoch 6 | 300/400 | 0.55 it/sec | Loss 0.1468 | Reco 0.1468 | Grad 0.2660
+[2026-06-20 03:45:45,430][demucs.solver][INFO] - [1mTrain Summary | Epoch 6 | Loss=0.1454 | Reco=0.1454 | Grad=0.2588[0m
+[2026-06-20 03:45:45,430][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 03:45:45,430][demucs.solver][INFO] - Cross validation...
+[2026-06-20 03:46:47,769][demucs.solver][INFO] - Valid | Epoch 6 | 3/15 | 15.5 sec/it | Loss 0.4167 | Reco 0.4167 | Nsdr 4.689
+[2026-06-20 03:47:22,098][demucs.solver][INFO] - Valid | Epoch 6 | 6/15 | 13.8 sec/it | Loss 0.4140 | Reco 0.4140 | Nsdr 4.490
+[2026-06-20 03:48:03,528][demucs.solver][INFO] - Valid | Epoch 6 | 9/15 | 13.8 sec/it | Loss 0.4136 | Reco 0.4136 | Nsdr 4.542
+[2026-06-20 03:48:36,897][demucs.solver][INFO] - Valid | Epoch 6 | 12/15 | 13.2 sec/it | Loss 0.4179 | Reco 0.4179 | Nsdr 4.403
+[2026-06-20 03:50:07,278][demucs.solver][INFO] - Valid | Epoch 6 | 3/15 | 15.6 sec/it | Loss 0.4141 | Reco 0.4141 | Nsdr 4.758
+[2026-06-20 03:50:41,739][demucs.solver][INFO] - Valid | Epoch 6 | 6/15 | 13.8 sec/it | Loss 0.4115 | Reco 0.4115 | Nsdr 4.575
+[2026-06-20 03:51:23,241][demucs.solver][INFO] - Valid | Epoch 6 | 9/15 | 13.8 sec/it | Loss 0.4108 | Reco 0.4108 | Nsdr 4.628
+[2026-06-20 03:51:56,767][demucs.solver][INFO] - Valid | Epoch 6 | 12/15 | 13.2 sec/it | Loss 0.4149 | Reco 0.4149 | Nsdr 4.487
+[2026-06-20 03:53:27,166][demucs.solver][INFO] - Valid | Epoch 6 | 3/15 | 15.6 sec/it | Loss 0.4145 | Reco 0.4145 | Nsdr 4.751
+[2026-06-20 03:54:01,588][demucs.solver][INFO] - Valid | Epoch 6 | 6/15 | 13.8 sec/it | Loss 0.4118 | Reco 0.4118 | Nsdr 4.570
+[2026-06-20 03:54:42,921][demucs.solver][INFO] - Valid | Epoch 6 | 9/15 | 13.8 sec/it | Loss 0.4111 | Reco 0.4111 | Nsdr 4.623
+[2026-06-20 03:55:16,339][demucs.solver][INFO] - Valid | Epoch 6 | 12/15 | 13.2 sec/it | Loss 0.4151 | Reco 0.4151 | Nsdr 4.485
+[2026-06-20 03:56:47,028][demucs.solver][INFO] - Valid | Epoch 6 | 3/15 | 15.6 sec/it | Loss 0.4152 | Reco 0.4152 | Nsdr 4.729
+[2026-06-20 03:57:21,553][demucs.solver][INFO] - Valid | Epoch 6 | 6/15 | 13.9 sec/it | Loss 0.4128 | Reco 0.4128 | Nsdr 4.538
+[2026-06-20 03:58:03,171][demucs.solver][INFO] - Valid | Epoch 6 | 9/15 | 13.9 sec/it | Loss 0.4119 | Reco 0.4119 | Nsdr 4.594
+[2026-06-20 03:58:36,786][demucs.solver][INFO] - Valid | Epoch 6 | 12/15 | 13.3 sec/it | Loss 0.4159 | Reco 0.4159 | Nsdr 4.460
+[2026-06-20 04:00:08,104][demucs.solver][INFO] - Valid | Epoch 6 | 3/15 | 15.8 sec/it | Loss 0.4156 | Reco 0.4156 | Nsdr 4.721
+[2026-06-20 04:00:42,893][demucs.solver][INFO] - Valid | Epoch 6 | 6/15 | 14.0 sec/it | Loss 0.4130 | Reco 0.4130 | Nsdr 4.531
+[2026-06-20 04:01:24,718][demucs.solver][INFO] - Valid | Epoch 6 | 9/15 | 14.0 sec/it | Loss 0.4121 | Reco 0.4121 | Nsdr 4.589
+[2026-06-20 04:01:58,500][demucs.solver][INFO] - Valid | Epoch 6 | 12/15 | 13.3 sec/it | Loss 0.4160 | Reco 0.4160 | Nsdr 4.456
+[2026-06-20 04:02:26,449][demucs.solver][INFO] - [1mValid Summary | Epoch 6 | Loss=0.4142 | Reco=0.4142 | Nsdr=4.511 | Best=0.4142 | Bname=ema_batch_0[0m
+[2026-06-20 04:02:26,450][demucs.solver][INFO] - [1mNew best valid loss 0.4142[0m
+[2026-06-20 04:02:32,408][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 04:02:32,408][demucs.solver][INFO] - Training...
+[2026-06-20 04:05:38,317][demucs.solver][INFO] - Train | Epoch 7 | 100/400 | 0.54 it/sec | Loss 0.1383 | Reco 0.1383 | Grad 0.2310
+[2026-06-20 04:08:37,767][demucs.solver][INFO] - Train | Epoch 7 | 200/400 | 0.55 it/sec | Loss 0.1380 | Reco 0.1380 | Grad 0.2283
+[2026-06-20 04:11:37,495][demucs.solver][INFO] - Train | Epoch 7 | 300/400 | 0.55 it/sec | Loss 0.1383 | Reco 0.1383 | Grad 0.2264
+[2026-06-20 04:14:37,853][demucs.solver][INFO] - [1mTrain Summary | Epoch 7 | Loss=0.1389 | Reco=0.1389 | Grad=0.2298[0m
+[2026-06-20 04:14:37,853][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 04:14:37,854][demucs.solver][INFO] - Cross validation...
+[2026-06-20 04:15:40,984][demucs.solver][INFO] - Valid | Epoch 7 | 3/15 | 15.7 sec/it | Loss 0.4185 | Reco 0.4185 | Nsdr 4.664
+[2026-06-20 04:16:15,763][demucs.solver][INFO] - Valid | Epoch 7 | 6/15 | 14.0 sec/it | Loss 0.4157 | Reco 0.4157 | Nsdr 4.469
+[2026-06-20 04:16:57,736][demucs.solver][INFO] - Valid | Epoch 7 | 9/15 | 14.0 sec/it | Loss 0.4152 | Reco 0.4152 | Nsdr 4.519
+[2026-06-20 04:17:31,452][demucs.solver][INFO] - Valid | Epoch 7 | 12/15 | 13.3 sec/it | Loss 0.4197 | Reco 0.4197 | Nsdr 4.382
+[2026-06-20 04:19:02,753][demucs.solver][INFO] - Valid | Epoch 7 | 3/15 | 15.7 sec/it | Loss 0.4134 | Reco 0.4134 | Nsdr 4.774
+[2026-06-20 04:19:37,681][demucs.solver][INFO] - Valid | Epoch 7 | 6/15 | 14.0 sec/it | Loss 0.4107 | Reco 0.4107 | Nsdr 4.593
+[2026-06-20 04:20:19,350][demucs.solver][INFO] - Valid | Epoch 7 | 9/15 | 14.0 sec/it | Loss 0.4101 | Reco 0.4101 | Nsdr 4.643
+[2026-06-20 04:20:52,703][demucs.solver][INFO] - Valid | Epoch 7 | 12/15 | 13.3 sec/it | Loss 0.4140 | Reco 0.4140 | Nsdr 4.505
+[2026-06-20 04:22:23,226][demucs.solver][INFO] - Valid | Epoch 7 | 3/15 | 15.6 sec/it | Loss 0.4138 | Reco 0.4138 | Nsdr 4.763
+[2026-06-20 04:22:57,749][demucs.solver][INFO] - Valid | Epoch 7 | 6/15 | 13.8 sec/it | Loss 0.4110 | Reco 0.4110 | Nsdr 4.585
+[2026-06-20 04:23:39,098][demucs.solver][INFO] - Valid | Epoch 7 | 9/15 | 13.8 sec/it | Loss 0.4104 | Reco 0.4104 | Nsdr 4.636
+[2026-06-20 04:24:12,557][demucs.solver][INFO] - Valid | Epoch 7 | 12/15 | 13.2 sec/it | Loss 0.4144 | Reco 0.4144 | Nsdr 4.498
+[2026-06-20 04:25:43,141][demucs.solver][INFO] - Valid | Epoch 7 | 3/15 | 15.6 sec/it | Loss 0.4152 | Reco 0.4152 | Nsdr 4.730
+[2026-06-20 04:26:17,730][demucs.solver][INFO] - Valid | Epoch 7 | 6/15 | 13.9 sec/it | Loss 0.4126 | Reco 0.4126 | Nsdr 4.539
+[2026-06-20 04:26:59,030][demucs.solver][INFO] - Valid | Epoch 7 | 9/15 | 13.8 sec/it | Loss 0.4118 | Reco 0.4118 | Nsdr 4.595
+[2026-06-20 04:27:32,481][demucs.solver][INFO] - Valid | Epoch 7 | 12/15 | 13.2 sec/it | Loss 0.4157 | Reco 0.4157 | Nsdr 4.462
+[2026-06-20 04:29:03,307][demucs.solver][INFO] - Valid | Epoch 7 | 3/15 | 15.7 sec/it | Loss 0.4151 | Reco 0.4151 | Nsdr 4.732
+[2026-06-20 04:29:37,907][demucs.solver][INFO] - Valid | Epoch 7 | 6/15 | 13.9 sec/it | Loss 0.4125 | Reco 0.4125 | Nsdr 4.544
+[2026-06-20 04:30:19,287][demucs.solver][INFO] - Valid | Epoch 7 | 9/15 | 13.9 sec/it | Loss 0.4117 | Reco 0.4117 | Nsdr 4.599
+[2026-06-20 04:30:52,818][demucs.solver][INFO] - Valid | Epoch 7 | 12/15 | 13.2 sec/it | Loss 0.4157 | Reco 0.4157 | Nsdr 4.464
+[2026-06-20 04:31:20,860][demucs.solver][INFO] - [1mValid Summary | Epoch 7 | Loss=0.4132 | Reco=0.4132 | Nsdr=4.529 | Best=0.4132 | Bname=ema_batch_0[0m
+[2026-06-20 04:31:20,861][demucs.solver][INFO] - [1mNew best valid loss 0.4132[0m
+[2026-06-20 04:31:26,406][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 04:31:26,406][demucs.solver][INFO] - Training...
+[2026-06-20 04:34:32,225][demucs.solver][INFO] - Train | Epoch 8 | 100/400 | 0.54 it/sec | Loss 0.1506 | Reco 0.1506 | Grad 0.3189
+[2026-06-20 04:37:31,912][demucs.solver][INFO] - Train | Epoch 8 | 200/400 | 0.55 it/sec | Loss 0.1489 | Reco 0.1489 | Grad 0.2885
+[2026-06-20 04:40:31,202][demucs.solver][INFO] - Train | Epoch 8 | 300/400 | 0.55 it/sec | Loss 0.1476 | Reco 0.1476 | Grad 0.2717
+[2026-06-20 04:43:31,197][demucs.solver][INFO] - [1mTrain Summary | Epoch 8 | Loss=0.1474 | Reco=0.1474 | Grad=0.2677[0m
+[2026-06-20 04:43:31,197][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 04:43:31,198][demucs.solver][INFO] - Cross validation...
+[2026-06-20 04:44:33,637][demucs.solver][INFO] - Valid | Epoch 8 | 3/15 | 15.6 sec/it | Loss 0.4167 | Reco 0.4167 | Nsdr 4.700
+[2026-06-20 04:45:08,025][demucs.solver][INFO] - Valid | Epoch 8 | 6/15 | 13.8 sec/it | Loss 0.4176 | Reco 0.4176 | Nsdr 4.386
+[2026-06-20 04:45:49,076][demucs.solver][INFO] - Valid | Epoch 8 | 9/15 | 13.8 sec/it | Loss 0.4167 | Reco 0.4167 | Nsdr 4.461
+[2026-06-20 04:46:22,277][demucs.solver][INFO] - Valid | Epoch 8 | 12/15 | 13.1 sec/it | Loss 0.4198 | Reco 0.4198 | Nsdr 4.352
+[2026-06-20 04:47:52,330][demucs.solver][INFO] - Valid | Epoch 8 | 3/15 | 15.5 sec/it | Loss 0.4135 | Reco 0.4135 | Nsdr 4.772
+[2026-06-20 04:48:26,781][demucs.solver][INFO] - Valid | Epoch 8 | 6/15 | 13.8 sec/it | Loss 0.4104 | Reco 0.4104 | Nsdr 4.598
+[2026-06-20 04:49:08,170][demucs.solver][INFO] - Valid | Epoch 8 | 9/15 | 13.8 sec/it | Loss 0.4098 | Reco 0.4098 | Nsdr 4.649
+[2026-06-20 04:49:41,487][demucs.solver][INFO] - Valid | Epoch 8 | 12/15 | 13.2 sec/it | Loss 0.4139 | Reco 0.4139 | Nsdr 4.509
+[2026-06-20 04:51:11,711][demucs.solver][INFO] - Valid | Epoch 8 | 3/15 | 15.6 sec/it | Loss 0.4137 | Reco 0.4137 | Nsdr 4.767
+[2026-06-20 04:51:46,235][demucs.solver][INFO] - Valid | Epoch 8 | 6/15 | 13.8 sec/it | Loss 0.4108 | Reco 0.4108 | Nsdr 4.590
+[2026-06-20 04:52:27,728][demucs.solver][INFO] - Valid | Epoch 8 | 9/15 | 13.8 sec/it | Loss 0.4101 | Reco 0.4101 | Nsdr 4.642
+[2026-06-20 04:53:01,071][demucs.solver][INFO] - Valid | Epoch 8 | 12/15 | 13.2 sec/it | Loss 0.4141 | Reco 0.4141 | Nsdr 4.504
+[2026-06-20 04:54:31,397][demucs.solver][INFO] - Valid | Epoch 8 | 3/15 | 15.5 sec/it | Loss 0.4144 | Reco 0.4144 | Nsdr 4.746
+[2026-06-20 04:55:06,046][demucs.solver][INFO] - Valid | Epoch 8 | 6/15 | 13.8 sec/it | Loss 0.4121 | Reco 0.4121 | Nsdr 4.552
+[2026-06-20 04:55:47,537][demucs.solver][INFO] - Valid | Epoch 8 | 9/15 | 13.8 sec/it | Loss 0.4114 | Reco 0.4114 | Nsdr 4.606
+[2026-06-20 04:56:21,049][demucs.solver][INFO] - Valid | Epoch 8 | 12/15 | 13.2 sec/it | Loss 0.4152 | Reco 0.4152 | Nsdr 4.473
+[2026-06-20 04:57:51,493][demucs.solver][INFO] - Valid | Epoch 8 | 3/15 | 15.6 sec/it | Loss 0.4145 | Reco 0.4145 | Nsdr 4.745
+[2026-06-20 04:58:25,715][demucs.solver][INFO] - Valid | Epoch 8 | 6/15 | 13.8 sec/it | Loss 0.4123 | Reco 0.4123 | Nsdr 4.548
+[2026-06-20 04:59:07,052][demucs.solver][INFO] - Valid | Epoch 8 | 9/15 | 13.8 sec/it | Loss 0.4115 | Reco 0.4115 | Nsdr 4.603
+[2026-06-20 04:59:40,431][demucs.solver][INFO] - Valid | Epoch 8 | 12/15 | 13.2 sec/it | Loss 0.4153 | Reco 0.4153 | Nsdr 4.471
+[2026-06-20 05:00:08,091][demucs.solver][INFO] - [1mValid Summary | Epoch 8 | Loss=0.4131 | Reco=0.4131 | Nsdr=4.532 | Best=0.4131 | Bname=ema_batch_0[0m
+[2026-06-20 05:00:08,091][demucs.solver][INFO] - [1mNew best valid loss 0.4131[0m
+[2026-06-20 05:00:13,760][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 05:00:13,760][demucs.solver][INFO] - Training...
+[2026-06-20 05:03:18,113][demucs.solver][INFO] - Train | Epoch 9 | 100/400 | 0.55 it/sec | Loss 0.1406 | Reco 0.1406 | Grad 0.2201
+[2026-06-20 05:06:17,144][demucs.solver][INFO] - Train | Epoch 9 | 200/400 | 0.55 it/sec | Loss 0.1417 | Reco 0.1417 | Grad 0.2322
+[2026-06-20 05:09:17,307][demucs.solver][INFO] - Train | Epoch 9 | 300/400 | 0.55 it/sec | Loss 0.1408 | Reco 0.1408 | Grad 0.2296
+[2026-06-20 05:12:18,239][demucs.solver][INFO] - [1mTrain Summary | Epoch 9 | Loss=0.1420 | Reco=0.1420 | Grad=0.2254[0m
+[2026-06-20 05:12:18,240][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 05:12:18,240][demucs.solver][INFO] - Cross validation...
+[2026-06-20 05:13:21,000][demucs.solver][INFO] - Valid | Epoch 9 | 3/15 | 15.6 sec/it | Loss 0.4148 | Reco 0.4148 | Nsdr 4.740
+[2026-06-20 05:13:55,687][demucs.solver][INFO] - Valid | Epoch 9 | 6/15 | 13.9 sec/it | Loss 0.4182 | Reco 0.4182 | Nsdr 4.353
+[2026-06-20 05:14:37,229][demucs.solver][INFO] - Valid | Epoch 9 | 9/15 | 13.9 sec/it | Loss 0.4161 | Reco 0.4161 | Nsdr 4.459
+[2026-06-20 05:15:10,805][demucs.solver][INFO] - Valid | Epoch 9 | 12/15 | 13.3 sec/it | Loss 0.4198 | Reco 0.4198 | Nsdr 4.347
+[2026-06-20 05:16:41,086][demucs.solver][INFO] - Valid | Epoch 9 | 3/15 | 15.5 sec/it | Loss 0.4128 | Reco 0.4128 | Nsdr 4.788
+[2026-06-20 05:17:15,394][demucs.solver][INFO] - Valid | Epoch 9 | 6/15 | 13.8 sec/it | Loss 0.4099 | Reco 0.4099 | Nsdr 4.605
+[2026-06-20 05:17:56,749][demucs.solver][INFO] - Valid | Epoch 9 | 9/15 | 13.8 sec/it | Loss 0.4094 | Reco 0.4094 | Nsdr 4.654
+[2026-06-20 05:18:30,272][demucs.solver][INFO] - Valid | Epoch 9 | 12/15 | 13.2 sec/it | Loss 0.4134 | Reco 0.4134 | Nsdr 4.518
+[2026-06-20 05:20:00,362][demucs.solver][INFO] - Valid | Epoch 9 | 3/15 | 15.5 sec/it | Loss 0.4133 | Reco 0.4133 | Nsdr 4.775
+[2026-06-20 05:20:34,744][demucs.solver][INFO] - Valid | Epoch 9 | 6/15 | 13.8 sec/it | Loss 0.4105 | Reco 0.4105 | Nsdr 4.596
+[2026-06-20 05:21:16,271][demucs.solver][INFO] - Valid | Epoch 9 | 9/15 | 13.8 sec/it | Loss 0.4099 | Reco 0.4099 | Nsdr 4.647
+[2026-06-20 05:21:49,644][demucs.solver][INFO] - Valid | Epoch 9 | 12/15 | 13.2 sec/it | Loss 0.4138 | Reco 0.4138 | Nsdr 4.509
+[2026-06-20 05:23:19,668][demucs.solver][INFO] - Valid | Epoch 9 | 3/15 | 15.5 sec/it | Loss 0.4138 | Reco 0.4138 | Nsdr 4.760
+[2026-06-20 05:23:54,182][demucs.solver][INFO] - Valid | Epoch 9 | 6/15 | 13.8 sec/it | Loss 0.4114 | Reco 0.4114 | Nsdr 4.563
+[2026-06-20 05:24:35,612][demucs.solver][INFO] - Valid | Epoch 9 | 9/15 | 13.8 sec/it | Loss 0.4107 | Reco 0.4107 | Nsdr 4.617
+[2026-06-20 05:25:09,059][demucs.solver][INFO] - Valid | Epoch 9 | 12/15 | 13.2 sec/it | Loss 0.4145 | Reco 0.4145 | Nsdr 4.485
+[2026-06-20 05:26:38,897][demucs.solver][INFO] - Valid | Epoch 9 | 3/15 | 15.5 sec/it | Loss 0.4140 | Reco 0.4140 | Nsdr 4.755
+[2026-06-20 05:27:13,251][demucs.solver][INFO] - Valid | Epoch 9 | 6/15 | 13.7 sec/it | Loss 0.4116 | Reco 0.4116 | Nsdr 4.562
+[2026-06-20 05:27:54,819][demucs.solver][INFO] - Valid | Epoch 9 | 9/15 | 13.8 sec/it | Loss 0.4108 | Reco 0.4108 | Nsdr 4.616
+[2026-06-20 05:28:28,327][demucs.solver][INFO] - Valid | Epoch 9 | 12/15 | 13.2 sec/it | Loss 0.4147 | Reco 0.4147 | Nsdr 4.483
+[2026-06-20 05:28:56,120][demucs.solver][INFO] - [1mValid Summary | Epoch 9 | Loss=0.4126 | Reco=0.4126 | Nsdr=4.541 | Best=0.4126 | Bname=ema_batch_0[0m
+[2026-06-20 05:28:56,120][demucs.solver][INFO] - [1mNew best valid loss 0.4126[0m
+[2026-06-20 05:29:02,128][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 05:29:02,128][demucs.solver][INFO] - Training...
+[2026-06-20 05:32:06,712][demucs.solver][INFO] - Train | Epoch 10 | 100/400 | 0.55 it/sec | Loss 0.1396 | Reco 0.1396 | Grad 0.2386
+[2026-06-20 05:35:05,944][demucs.solver][INFO] - Train | Epoch 10 | 200/400 | 0.55 it/sec | Loss 0.1396 | Reco 0.1396 | Grad 0.2188
+[2026-06-20 05:38:05,903][demucs.solver][INFO] - Train | Epoch 10 | 300/400 | 0.55 it/sec | Loss 0.1408 | Reco 0.1408 | Grad 0.2402
+[2026-06-20 05:41:06,426][demucs.solver][INFO] - [1mTrain Summary | Epoch 10 | Loss=0.1416 | Reco=0.1416 | Grad=0.2474[0m
+[2026-06-20 05:41:06,427][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 05:41:06,427][demucs.solver][INFO] - Cross validation...
+[2026-06-20 05:42:09,094][demucs.solver][INFO] - Valid | Epoch 10 | 3/15 | 15.6 sec/it | Loss 0.4183 | Reco 0.4183 | Nsdr 4.698
+[2026-06-20 05:42:43,516][demucs.solver][INFO] - Valid | Epoch 10 | 6/15 | 13.8 sec/it | Loss 0.4211 | Reco 0.4211 | Nsdr 4.307
+[2026-06-20 05:43:25,122][demucs.solver][INFO] - Valid | Epoch 10 | 9/15 | 13.9 sec/it | Loss 0.4189 | Reco 0.4189 | Nsdr 4.413
+[2026-06-20 05:43:58,622][demucs.solver][INFO] - Valid | Epoch 10 | 12/15 | 13.2 sec/it | Loss 0.4230 | Reco 0.4230 | Nsdr 4.295
+[2026-06-20 05:45:28,894][demucs.solver][INFO] - Valid | Epoch 10 | 3/15 | 15.5 sec/it | Loss 0.4126 | Reco 0.4126 | Nsdr 4.793
+[2026-06-20 05:46:03,263][demucs.solver][INFO] - Valid | Epoch 10 | 6/15 | 13.8 sec/it | Loss 0.4095 | Reco 0.4095 | Nsdr 4.610
+[2026-06-20 05:46:44,712][demucs.solver][INFO] - Valid | Epoch 10 | 9/15 | 13.8 sec/it | Loss 0.4091 | Reco 0.4091 | Nsdr 4.660
+[2026-06-20 05:47:18,217][demucs.solver][INFO] - Valid | Epoch 10 | 12/15 | 13.2 sec/it | Loss 0.4129 | Reco 0.4129 | Nsdr 4.525
+[2026-06-20 05:48:47,951][demucs.solver][INFO] - Valid | Epoch 10 | 3/15 | 15.4 sec/it | Loss 0.4130 | Reco 0.4130 | Nsdr 4.786
+[2026-06-20 05:49:22,245][demucs.solver][INFO] - Valid | Epoch 10 | 6/15 | 13.7 sec/it | Loss 0.4101 | Reco 0.4101 | Nsdr 4.603
+[2026-06-20 05:50:03,766][demucs.solver][INFO] - Valid | Epoch 10 | 9/15 | 13.8 sec/it | Loss 0.4095 | Reco 0.4095 | Nsdr 4.653
+[2026-06-20 05:50:36,931][demucs.solver][INFO] - Valid | Epoch 10 | 12/15 | 13.1 sec/it | Loss 0.4135 | Reco 0.4135 | Nsdr 4.515
+[2026-06-20 05:52:07,257][demucs.solver][INFO] - Valid | Epoch 10 | 3/15 | 15.6 sec/it | Loss 0.4132 | Reco 0.4132 | Nsdr 4.779
+[2026-06-20 05:52:41,479][demucs.solver][INFO] - Valid | Epoch 10 | 6/15 | 13.8 sec/it | Loss 0.4110 | Reco 0.4110 | Nsdr 4.566
+[2026-06-20 05:53:22,805][demucs.solver][INFO] - Valid | Epoch 10 | 9/15 | 13.8 sec/it | Loss 0.4103 | Reco 0.4103 | Nsdr 4.621
+[2026-06-20 05:53:56,106][demucs.solver][INFO] - Valid | Epoch 10 | 12/15 | 13.2 sec/it | Loss 0.4142 | Reco 0.4142 | Nsdr 4.490
+[2026-06-20 05:55:25,983][demucs.solver][INFO] - Valid | Epoch 10 | 3/15 | 15.5 sec/it | Loss 0.4136 | Reco 0.4136 | Nsdr 4.769
+[2026-06-20 05:56:00,399][demucs.solver][INFO] - Valid | Epoch 10 | 6/15 | 13.7 sec/it | Loss 0.4111 | Reco 0.4111 | Nsdr 4.572
+[2026-06-20 05:56:41,920][demucs.solver][INFO] - Valid | Epoch 10 | 9/15 | 13.8 sec/it | Loss 0.4104 | Reco 0.4104 | Nsdr 4.625
+[2026-06-20 05:57:15,312][demucs.solver][INFO] - Valid | Epoch 10 | 12/15 | 13.2 sec/it | Loss 0.4142 | Reco 0.4142 | Nsdr 4.494
+[2026-06-20 05:57:43,038][demucs.solver][INFO] - [1mValid Summary | Epoch 10 | Loss=0.4122 | Reco=0.4122 | Nsdr=4.548 | Best=0.4122 | Bname=ema_batch_0[0m
+[2026-06-20 05:57:43,038][demucs.solver][INFO] - [1mNew best valid loss 0.4122[0m
+[2026-06-20 05:57:43,147][demucs.solver][INFO] - ----------------------------------------------------------------------
+[2026-06-20 05:57:43,148][demucs.solver][INFO] - Evaluating on the test set...

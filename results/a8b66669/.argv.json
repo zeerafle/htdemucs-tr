@@ -1,0 +1,1 @@
+["test.shifts=0", "model=\"htdemucs\"", "htdemucs.dconv_mode=3", "htdemucs.depth=4", "htdemucs.t_dropout=0.02", "ema.epoch=[0.9, 0.95]", "ema.batch=[0.9995, 0.9999]", "htdemucs.t_layers=5", "htdemucs.bottom_channels=512", "continue_pretrained='955717e8'", "dset=tr_pilot", "variant=tr_finetune", "batch_size=4", "dset.segment=7.8", "misc.num_workers=4", "max_batches=400"]
