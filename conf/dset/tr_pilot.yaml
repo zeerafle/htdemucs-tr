@@ -2,6 +2,7 @@
 dset:
   use_musdb: false
   wav: /teamspace/studios/this_studio/htdemucs-tr/data/dataset
+  musdb: /teamspace/studios/this_studio/htdemucs-tr/data/dataset
   segment: 6
   samplerate: 44100
   channels: 2
