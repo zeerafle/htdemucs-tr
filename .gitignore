@@ -19,7 +19,12 @@ Session.vim
 PLANNING.md
 data/musdb18-hq
 data/midis/symbtr
+data/midis/selected
 separated_pilot
 
 # sweet search index
 .sweet-search
+
+# service-account keys -- never commit (public repo)
+*-key.json
+gcp-*.json
