@@ -64,6 +64,16 @@ def eval_track(references, estimates, win, hop, compute_sdr=True):
         return scores, new_scores
 
 
+class _Resolved:
+    """An already-computed stand-in for a future, so the collection loop stays uniform."""
+
+    def __init__(self, value):
+        self._value = value
+
+    def result(self):
+        return self._value
+
+
 def evaluate(solver, compute_sdr=False):
     """
     Evaluate model using museval.
@@ -127,8 +137,18 @@ def evaluate(solver, compute_sdr=False):
                 for name, estimate in zip(model.sources, estimates):
                     save_audio(estimate.cpu(), folder / (name + ".mp3"), model.samplerate)
 
-            pendings.append((track.name, pool.submit(
-                eval_track, references, estimates, win=win, hop=hop, compute_sdr=compute_sdr)))
+            pending = pool.submit(
+                eval_track, references, estimates, win=win, hop=hop, compute_sdr=compute_sdr)
+            if not args.test.workers:
+                # DummyPoolExecutor defers the work to .result(), so an unresolved pending
+                # keeps its references and estimates alive. Nothing is collected until all
+                # tracks are submitted, so the loop accumulates 2 * sources * channels *
+                # length floats per track -- ~364 MB for a 129 s track, 5.5 GB over 15 --
+                # and the kernel OOM-kills the process partway through, with no traceback.
+                # With no pool there is nothing to overlap with anyway, so resolve now and
+                # let the tensors go.
+                pending = _Resolved(pending.result())
+            pendings.append((track.name, pending))
 
         pendings = LogProgress(logger, pendings, updates=args.misc.num_prints,
                                name='Eval (BSS)')
