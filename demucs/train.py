@@ -180,15 +180,12 @@ def get_solver(args, model_only=False):
     train_set, valid_set = get_datasets(args)
 
     if args.augment.repitch.proba:
-        vocals = []
-        if "vocals" in args.dset.sources:
-            vocals.append(args.dset.sources.index("vocals"))
-        else:
-            logger.warning("No vocal source found")
-        if args.augment.repitch.proba:
-            train_set = RepitchedWrapper(
-                train_set, vocals=vocals, **args.augment.repitch
-            )
+        # Upstream passes the vocals index so `repitch` adds soundstretch's `-speech` flag to
+        # that stem -- a shorter sequence window tuned for speech formants. Here the `vocals`
+        # slot holds the baglama, a plucked string instrument, so the flag would be applied on
+        # the strength of a slot name to something that is not a voice, and only to the target
+        # stem. An empty list treats all four stems as music, which is what they are.
+        train_set = RepitchedWrapper(train_set, vocals=[], **args.augment.repitch)
 
     logger.info("train/valid set size: %d %d", len(train_set), len(valid_set))
     train_loader = distrib.loader(
