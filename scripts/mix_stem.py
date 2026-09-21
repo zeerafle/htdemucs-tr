@@ -72,11 +72,11 @@ def pad_to(audio: np.ndarray, n: int) -> np.ndarray:
     return np.pad(audio, ((0, n - len(audio)), (0, 0)))
 
 
-def build_track(piece: str, out_track: Path) -> None:
+def build_track(piece: str, out_track: Path, synth_dir: Path = SYNTH_DIR) -> None:
     """Assemble one track. Raises FileNotFoundError if any instrument render is missing."""
     # Load every constituent first so length can be reconciled across all of them.
     loaded = {
-        slot: [load_wav(SYNTH_DIR / inst / f"{piece}.wav") for inst in insts]
+        slot: [load_wav(synth_dir / inst / f"{piece}.wav") for inst in insts]
         for slot, insts in STEM_SOURCES.items()
     }
     n = max(len(a) for parts in loaded.values() for a in parts)
@@ -121,10 +121,10 @@ def verify_track(out_track: Path, tol: float = 1e-3) -> float:
     return err
 
 
-def available_pieces() -> list[str]:
+def available_pieces(synth_dir: Path = SYNTH_DIR) -> list[str]:
     """Pieces rendered for every instrument -- a missing render silently drops a stem."""
     per_instrument = [
-        {p.stem for p in (SYNTH_DIR / inst).glob("*.wav")}
+        {p.stem for p in (synth_dir / inst).glob("*.wav")}
         for insts in STEM_SOURCES.values()
         for inst in insts
     ]
@@ -139,6 +139,15 @@ if __name__ == "__main__":
     parser.add_argument("--n_valid", type=int, default=15)
     parser.add_argument("--n_test", type=int, default=15)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--synth-dir", type=Path, default=SYNTH_DIR)
+    parser.add_argument("--out-dir", type=Path, default=OUT_DIR)
+    parser.add_argument(
+        "--mirror",
+        type=Path,
+        help="Build only the tracks named in this split directory, into <out-dir>/<its name>. "
+        "Used for the unison test variant, which has to hold exactly the pieces of the "
+        "regular test split for the two scores to be comparable (§3.6).",
+    )
     parser.add_argument(
         "--verify",
         action="store_true",
@@ -146,34 +155,43 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    pieces = available_pieces()
-    if not pieces:
-        raise FileNotFoundError(
-            f"No piece rendered for all of {[i for v in STEM_SOURCES.values() for i in v]} "
-            f"under {SYNTH_DIR}"
-        )
-    print(f"{len(pieces)} pieces rendered for all instruments.")
+    SYNTH, OUT = args.synth_dir, args.out_dir
 
-    random.seed(args.seed)
-    random.shuffle(pieces)
+    if args.mirror:
+        chosen = sorted(p.name for p in args.mirror.iterdir() if p.is_dir())
+        splits = [(args.mirror.name, chosen)]
+        print(f"Mirroring {len(chosen)} tracks from {args.mirror}")
+    else:
+        pieces = available_pieces(SYNTH)
+        if not pieces:
+            raise FileNotFoundError(
+                f"No piece rendered for all of {[i for v in STEM_SOURCES.values() for i in v]} "
+                f"under {SYNTH}"
+            )
+        print(f"{len(pieces)} pieces rendered for all instruments.")
 
-    needed = args.n_train + args.n_valid + args.n_test
-    if needed > len(pieces):
-        raise SystemExit(f"Need {needed} pieces, only {len(pieces)} available.")
+        random.seed(args.seed)
+        random.shuffle(pieces)
 
-    cursor = 0
-    for split, count in [
-        ("train", args.n_train),
-        ("valid", args.n_valid),
-        ("test", args.n_test),
-    ]:
-        chosen = pieces[cursor : cursor + count]
-        cursor += count
-        print(f"\n[{split}] {len(chosen)} tracks -> {OUT_DIR / split}")
+        needed = args.n_train + args.n_valid + args.n_test
+        if needed > len(pieces):
+            raise SystemExit(f"Need {needed} pieces, only {len(pieces)} available.")
+
+        cursor, splits = 0, []
+        for split, count in [
+            ("train", args.n_train),
+            ("valid", args.n_valid),
+            ("test", args.n_test),
+        ]:
+            splits.append((split, pieces[cursor : cursor + count]))
+            cursor += count
+
+    for split, chosen in splits:
+        print(f"\n[{split}] {len(chosen)} tracks -> {OUT / split}")
         for i, piece in enumerate(chosen, 1):
-            out_track = OUT_DIR / split / piece
+            out_track = OUT / split / piece
             print(f"  [{i:>3}/{len(chosen)}] {piece}")
-            build_track(piece, out_track)
+            build_track(piece, out_track, SYNTH)
             if args.verify:
                 verify_track(out_track)
         print(f"[{split}] Done.")

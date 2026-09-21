@@ -25,6 +25,7 @@ separated_pilot
 # sweet search index
 .sweet-search
 
-# service-account keys -- never commit (public repo)
+# service-account keys
 *-key.json
 gcp-*.json
+data/midis/selected_unison

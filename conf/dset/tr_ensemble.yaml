@@ -1,0 +1,13 @@
+# @package _global_
+# Turkish ensemble dataset: 90 SymbTr pieces, 60/15/15, four stems in heterophony.
+#   vocals = baglama_saz (target)   other = ney + kanun
+#   bass   = ud                     drums = bendir (usul cycle)
+# Paths are relative to the repo root on purpose -- an absolute path lands in the xp
+# signature and drifts between machines (see POST-ABSTRACT-PLAN.md §6.7). Launch from root.
+dset:
+  use_musdb: false
+  wav: data/dataset_tr
+  musdb: data/dataset_tr
+  segment: 6
+  samplerate: 44100
+  channels: 2
