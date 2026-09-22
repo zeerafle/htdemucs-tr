@@ -1,0 +1,13 @@
+{
+ "note": "mixture-as-estimate, new_sdr, 15 tracks in data/dataset_tr/test",
+ "nsdr_drums": -4.788935383747193,
+ "nsdr_med_drums": -4.785059333036434,
+ "nsdr_bass": -4.770246412117377,
+ "nsdr_med_bass": -4.77039383434262,
+ "nsdr_other": -4.790782679149772,
+ "nsdr_med_other": -4.789543839379654,
+ "nsdr_vocals": -4.770692460024369,
+ "nsdr_med_vocals": -4.770569913458182,
+ "nsdr": -4.7801642337596775,
+ "nsdr_med": -4.774189522930298
+}

@@ -1,0 +1,13 @@
+{
+ "note": "mixture-as-estimate, new_sdr, 15 tracks in data/dataset_tr_unison/test",
+ "nsdr_drums": -4.759146686890353,
+ "nsdr_med_drums": -4.762851234242211,
+ "nsdr_bass": -4.771192820287632,
+ "nsdr_med_bass": -4.7694963102836265,
+ "nsdr_other": -4.760456451681872,
+ "nsdr_med_other": -4.764451494889999,
+ "nsdr_vocals": -4.768569330962065,
+ "nsdr_med_vocals": -4.769953839344577,
+ "nsdr": -4.764841322455481,
+ "nsdr_med": -4.767480118965688
+}

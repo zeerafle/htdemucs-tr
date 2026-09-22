@@ -73,3 +73,37 @@ So for the target head the comparison is exact: **identical reference audio, onl
 mixture moved.** −7.56 dB is a clean measurement. For `bass`, `other` and `drums` the reference
 itself changed, so those rows are same-distribution comparisons, not paired ones — informative,
 but do not report them as controls.
+
+---
+
+## The trivial floor, 22 Sep 2026
+
+`floor-mixture-as-estimate.json`, `floor-mixture-as-estimate-unison.json`, from
+`scripts/floor_baseline.py`. Estimate every source as the mixture.
+
+**−4.78 dB**, near-identical across all four sources and both test sets. That is the analytic value
+for four equal-power, mutually incoherent sources: `ref − est = −Σ(others)`, so the ratio is
+`1/3` and `10·log10(1/3) = −4.77`. Getting it to two decimals is a check on the dataset — it
+confirms the stems really are RMS-matched and that `mixture == Σ stems` holds.
+
+This settles a reading that §4.2 got only half right. The pilot's floor came out at ≈ 0 dB, which
+made the zero-shot `sdr_vocals` of −0.0006 look like it was sitting exactly on the floor. It wasn't
+a coincidence and it wasn't the floor — the pilot mixtures had `mixture = 0.5 · Σ stems` (§4.3), and
+with that gain the arithmetic gives `‖0.5·ref − 0.5·Σothers‖² = ‖ref‖²`, i.e. 0 dB. The defect
+*was* the coincidence.
+
+With the gain fixed, the two baselines separate by 4.77 dB and the results table has three distinct
+reference points:
+
+| head | instrument | floor (mixture) | silence | zero-shot | fine-tuned | unison |
+|---|---|---|---|---|---|---|
+| `vocals` | **bağlama** | −4.77 | 0.00 | 0.0006 | **16.24** | **8.68** |
+| `bass` | ud | −4.77 | 0.00 | −2.02 | 17.19 | 8.36 |
+| `other` | ney + kanun | −4.79 | 0.00 | −3.13 | 19.60 | 10.29 |
+| `drums` | bendir | −4.79 | 0.00 | +0.93 | 21.23 | 18.03 |
+| mean | | −4.78 | 0.00 | −1.05 | 18.57 | 11.34 |
+
+Emitting **silence beats emitting the mixture by 4.77 dB** when the sources are equal-power. So
+stock HTDemucs' 0.0006 on the bağlama is not "no better than trivial" — it is 4.77 dB better than
+the trivial baseline, and it achieves that by outputting nothing. Say this explicitly; a reviewer
+who assumes 0 dB is the floor will misread the entire zero-shot column.
