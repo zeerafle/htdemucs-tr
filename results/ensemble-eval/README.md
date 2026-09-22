@@ -33,3 +33,43 @@ Two things that are not optional context:
    headroom the pilot lacked.
 
 Per-track JSONs live in the teardown archive `gs://htdemucs-tr/results/`, not here.
+
+---
+
+## Fine-tune `10b843f9` + unison ablation, 22 Sep 2026
+
+| file | what |
+|---|---|
+| `finetuned-10b843f9.json` | fine-tuned model, `data/dataset_tr/test` |
+| `finetuned-10b843f9-unison.json` | same model, `data/dataset_tr_unison/test` (§3.6 ablation) |
+
+Both at `test.shifts=1`, matching the zero-shot gate, so all three columns are comparable. The
+epoch-50 in-training test summary in `train.log` is **not** — `-f 955717e8` inherits
+`test.shifts=0`.
+
+nSDR, mean over 15 tracks:
+
+| head | instrument | zero-shot | fine-tuned | unison | Δ ablation |
+|---|---|---|---|---|---|
+| `vocals` | **bağlama (target)** | 0.0006 | **16.24** | **8.68** | **−7.56** |
+| `bass` | ud | −2.02 | 17.19 | 8.36 | −8.83 |
+| `other` | ney + kanun | −3.13 | 19.60 | 10.29 | −9.32 |
+| `drums` | bendir | +0.93 | 21.23 | 18.03 | −3.20 |
+| mean | | −1.05 | 18.57 | 11.34 | −7.23 |
+
+**The ablation is paired on the target and unpaired elsewhere.** `scripts/generate_midi.py:411`
+builds one `random.Random(seed)` and draws from it across the whole staged set, so the jitter and
+velocity realizations depend on how many files are staged — 90 for the main dataset, 15 for the
+unison set. Every stem with nonzero jitter is therefore a *different draw* in the two sets, not the
+same audio.
+
+The bağlama is the exception, and it is the exception that matters: it renders at
+`jitter=0, velocity_sigma=0`, so the RNG never touches it. Verified directly — regressing the
+unison `vocals.wav` on the main one gives a residual of **3.0e-05** (the PCM_16 quantization floor)
+at a per-track gain of 0.863–0.927, the gain being the shared normalizer in `mix_stem.py` responding
+to a different mixture peak.
+
+So for the target head the comparison is exact: **identical reference audio, only the surrounding
+mixture moved.** −7.56 dB is a clean measurement. For `bass`, `other` and `drums` the reference
+itself changed, so those rows are same-distribution comparisons, not paired ones — informative,
+but do not report them as controls.
