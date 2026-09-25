@@ -8,6 +8,7 @@
 
 from argparse import ArgumentParser
 import logging
+from pathlib import Path
 import sys
 
 import torch
@@ -22,6 +23,8 @@ def main():
                             description="Evaluate pre-trained models or bags of models "
                                         "on MusDB.")
     pretrained.add_model_flags(parser)
+    parser.add_argument('--per-track', type=Path,
+                        help='Also write each test track\'s scores to this JSON file.')
     parser.add_argument('overrides', nargs='*',
                         help='Extra overrides, e.g. test.shifts=2.')
     args = parser.parse_args()
@@ -35,7 +38,7 @@ def main():
     solver.model.eval()
 
     with torch.no_grad():
-        results = evaluate.evaluate(solver, xp.cfg.test.sdr)
+        results = evaluate.evaluate(solver, xp.cfg.test.sdr, per_track=args.per_track)
     print(results)
 
 

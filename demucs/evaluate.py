@@ -10,6 +10,7 @@ be reported as `nsdr` for `new sdr`).
 """
 
 from concurrent import futures
+import json
 import logging
 
 from dora.log import LogProgress
@@ -74,11 +75,15 @@ class _Resolved:
         return self._value
 
 
-def evaluate(solver, compute_sdr=False):
+def evaluate(solver, compute_sdr=False, per_track=None):
     """
     Evaluate model using museval.
     compute_sdr=False means using only the MDX definition of the SDR, which
     is much faster to evaluate.
+
+    per_track: optional path. If given, each track's scores are written there as JSON --
+    {track: {source: {metric: value}}} with the same per-track median the averages below use --
+    so per-track spread can be reported without re-running separation.
     """
 
     args = solver.args
@@ -173,6 +178,17 @@ def evaluate(solver, compute_sdr=False):
         all_tracks = {}
         for src in range(distrib.world_size):
             all_tracks.update(distrib.share(tracks, src))
+
+        if per_track is not None and distrib.rank == 0:
+            per_track_scores = {
+                track: {
+                    source: {metric.lower(): float(np.nanmedian(values))
+                             for metric, values in metrics.items()}
+                    for source, metrics in sources.items()}
+                for track, sources in sorted(all_tracks.items())}
+            with open(per_track, "w") as f:
+                json.dump(per_track_scores, f, indent=1)
+            logger.info("Per-track scores written to %s", per_track)
 
         result = {}
         metric_names = next(iter(all_tracks.values()))[model.sources[0]]
