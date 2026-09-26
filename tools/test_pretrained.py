@@ -31,7 +31,7 @@ def main():
 
     xp = train.main.get_xp(args.overrides)
     with xp.enter():
-        solver = train.get_solver(xp.cfg)
+        solver = train.get_solver(xp.cfg, model_only=True)  # evaluation needs no train/valid data
 
     model = pretrained.get_model_from_args(args)
     solver.model = model.to(solver.device)

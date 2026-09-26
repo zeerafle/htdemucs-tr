@@ -23,6 +23,7 @@ so a piece's nSDR here agrees with tools.test_pretrained to within that random s
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -72,8 +73,9 @@ def label(source: str) -> str:
 def plot(rows, samplerate: int, path: Path, title: str):
     """rows: list of (row title, [(panel title, signal), ...]). One colour scale per row, set by
     its first panel, so estimate and residual read against the reference."""
-    import matplotlib
-    matplotlib.use("Agg")
+    # A notebook kernel exports MPLBACKEND=module://matplotlib_inline..., which this process
+    # inherits but cannot import; matplotlib rejects it at import, before use() could override it.
+    os.environ["MPLBACKEND"] = "Agg"
     import matplotlib.pyplot as plt
 
     ncols = max(len(panels) for _, panels in rows)
